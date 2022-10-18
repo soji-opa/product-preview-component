@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --clr-cyan: hsl(158, 36%, 37%);
+    --clr-cream: hsl(30, 38%, 92%);
+    --clr-dkblue: hsl(212, 21%, 14%);
+    --clr-gyblue:hsl(228, 12%, 48%);
+    --clr-white: hsl(0, 0%, 100%);
+}
+
+body{
+    margin: 0;
+    font-family: 'Montserrat', 'Fraunces', sans-serif;
+    background-color: var(--clr-cream);
+    color: var(--clr-dkblue);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+.product{
+    padding: 0 1em;
+}
+
+img, picture{
+    max-width: 100%;
+    display: block;
+}
+
+.card--img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.product--details{
+    background-color: var(--clr-white);
+    padding: 1.5em;
+}
+
+.product--details p{
+    line-height: 1.5;
+    color: var(--clr-gyblue);
+}
+
+.product--title{
+    letter-spacing: 0.3rem;
+    font-size: 12px;
+}
+
+.product--desc h2{
+    padding: 20px 0;
+    font-family: 'Fraunces';
+    font-size: 2.1rem;
+}
+
+.product--desc p{
+    font-size: 15px;
+}
+
+.product--price{
+    padding-top: 20px;
+    display: flex;
+    gap: 1rem;
+}
+
+p.current--price{
+    color: var(--clr-cyan);
+    font-size: 28px;
+    font-family: 'Fraunces';
+}
+
+p.slashed--price{
+    text-decoration: line-through;
+    color: var(--clr-gyblue);
+    font-family: 'Montserrat';
+    align-self: center;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4em;
+    width: 100%;
+    background-color: var(--clr-cyan);
+    margin: 15px 0;
+    border: none;
+    color: var(--clr-white);
+    padding: 15px 35px;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-family: 'Fraunces';
+}
+
+button img{
+    align-self: center;
+}
+
+@media (min-width: 640px){
+    
+    .product{
+        display: flex;
+        max-width: 600px;
+        height: 450px;
+    }
+
+    .product--details{
+        width: 50%;
+    }
+
+    .card--img{
+        height: 450px;
+    }
+
+    .card--img{
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    button{
+        margin-bottom: 0;
+    }
+}
